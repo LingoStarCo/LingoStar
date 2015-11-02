@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="PilotPlant : Create mobile app prototype using Xcode Storyboard" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css">
+
+    <title>PilotPlant</title>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-50128049-2', 'codershigh.github.io');
+    ga('send', 'pageview');
+
+  </script>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+        <p><a href="../../index_kr.html">Home</a> > Living MockUp</p>
+          <h1 id="project_title">Living MockUp</h1>
+          <h2 id="project_tagline">손으로 그린 그림을 프로토타입으로 만들기</h2>
+
+          <!--<p class="downloads"><a href="https://dl.dropboxusercontent.com/u/429043/PilotPlant/MyIssue_MockUp.zip">목업 스케치 Download</a></p>-->
+          <!--<p class="downloads"><a href="https://dl.dropboxusercontent.com/u/429043/PilotPlant/LivingMockUp.zip">Xcode 프로젝트 Download</a></p>-->
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+        <iframe class="video" src="//www.youtube.com/embed/J_MlY6egVx0" frameborder="0" allowfullscreen></iframe>
+        <p class="img_caption">이 튜토리얼을 통해 만든 프로토타입.</p>
+
+        <iframe class="video" src="//www.youtube.com/embed/PbCMdIxqjaw" frameborder="0" allowfullscreen></iframe>
+        <p class="img_caption">동영상 튜토리얼</p>
+
+
+        <h2>1. 프로젝트 준비하기 </h2>
+
+        <p>목업 스케치를 준비합니다. 손으로 그린 그림이지만 화면 비율과 맞아야 하므로 가급적 목업 스케치 템플리트를 이용해 그림을 그리고 스캔합니다. 스캐너가 없다면 iOS 용 앱 중 사진 찍은 뒤 문서를 보정해주는 앱을 이용합니다. 여기에서는 320*568을 기준으로 목업 스케치 이미지를 제작했지만, 원한다면 레티나 해상도에 대응 가능한 640*1136으로 제작할 수 있습니다. </p>
+
+		<div class="img_div img_width80 img_left">
+		  <img src="./01_images/1_MockUpSketches.png" />
+		  <p class="img_caption">목업 스케치를 준비합니다.</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>Welcome to Xcode 화면에서 "Create a New Xcode Project"를 선택하거나 File 메뉴에서 New Project 메뉴를 통해 새로운 프로젝트를 생성합니다.</p>
+		<div class="img_div img_width80 img_left">
+		  <img src="./01_images/2_Welcome Screen.png" />
+		  <p class="img_caption">New Project 선택 </p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>프로젝트 템플리트 선택 화면에서 PilotPlant를 선택하고 Next를 누릅니다. </p>
+		<div class="img_div img_width80 img_left">
+		  <img src="./01_images/3_ProjectTemplate.png" />
+		  <p class="img_caption">Pilot Plant 선택 </p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>프로젝트 이름을 줍니다. 여기에서는 Living MockUp 이라는 이름을 줬습니다. </p>
+		<div class="img_div img_width80 img_left">
+		  <img src="./01_images/4_ProjectNaming.png" />
+		  <p class="img_caption">프로젝트 이름을 줍니다. </p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>목업 스케치들을 ImageAsset으로 더합니다. 아래와 같은 그림이 나옵니다. 원한다면 @2x 이미지를 추가할 수 있습니다. </p>
+		<div class="img_div img_width80 img_left">
+		  <img src="./01_images/5_AddImagesToImageAssets.png" />
+		  <p class="img_caption">ImageAsset으로 목업 스케치를 추가합니다. </p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>1번 이미지를 '미디어 라이브러리'로부터 뷰 오브젝트 위로 드래그 앤 드랍해서 넣습니다. 위치를 맞추어 화면에 가득 차게 합니다. </p>
+		<div class="img_div img_width80 img_left">
+		  <img src="./01_images/6_AddImage.png" />
+		  <p class="img_caption">1번 그림을 추가합니다. </p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>윈도우의 왼쪽 상단에서 iPhone Retina (4-inch)가 선택되어 있는지 확인한 뒤 Run 버튼을 눌러 실행합니다. </p>
+		<div class="img_div img_width40 img_left">
+		<img src="./01_images/7_Run.png" />
+		<p class="img_caption">실행해 봅니다. </p>
+		</div>
+		<br style="clear:both;" />
+
+
+		<h2>2. 네비게이션 추가하기 </h2>
+		<p>이제 네비게이션을 추가해 보겠습니다. 네비게이션을 위해서는 두개의 뷰 컨트롤러가 필요합니다. </p>
+		<p>오브젝트 라이브러리에서 뷰 컨트롤러 오브젝트를 캔바스로 추가합니다. 두 번째 이미지를 추가한 뷰 컨트롤러에 넣습니다. </p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/8_SecondViewController.png" />
+		<p class="img_caption">뷰 컨트롤러를 추가하고 두 번째 이미지를 넣습니다. </p>
+		</div>
+		<br style="clear:both;" />
+
+
+		<p>첫 번째 뷰 컨트롤러에 버튼 오브젝트를 추가합니다. 추가한 버튼을 선택한 뒤 키보드에서 컨트롤 키를 누르고 두 번째 뷰 컨트롤러로 드래그 앤 드롭하면 세그웨이 연결 HUD 창이 나타납니다. push를 선택합니다. </p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/9_PushConnection.png" />
+		<p class="img_caption">push 세그웨이 연결을 만듭니다. </p>
+		</div>
+		<br style="clear:both;" />
+
+
+		<p>연결 결과는 다음과 같습니다. 세그웨이를 선택하면 그 세그웨이를 동작시키는 버튼이 하일라이트 됩니다. 버튼의 타이틀을 지워서 버튼이 화면에 전혀 보이지 않더라도 동작에는 문제가 없으니 버튼 타이틀을 지우는 게 좋겠죠? </p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/10_PushResult.png" />
+		<p class="img_caption">push 세그웨이 연결 결과. </p>
+		</div>
+		<br style="clear:both;" />
+
+
+		<p>Run 버튼으로 실행해 봅니다. 버튼을 누르면 네비게이션이 될까요?</p>
+		<p>아쉽게도 앱이 죽어버리는 군요. 무엇을 잘 못 한 걸까요?</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/11_PushError.png" />
+		<p class="img_caption">앱은 정상 동작하지 않고 크래시 납니다. </p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>네비게이션을 위해서는 네비게이션 컨트롤러가 필요합니다. 그림과 같이 첫 번째 뷰를 선택한 상태에서  Editor 메뉴에서 Embed in Navigation Controller 메뉴를 선택합니다.</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/12_EmbedNavigationController.png" />
+		<p class="img_caption">Embed in Navigation Controller를 이용해 네비게이션 추가하기</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>이대로 실행하면, 반투명한 네비게이션 바가 생겨서 목업 스케치의 윗 부분을 덮어 버립니다. 네비게이션바도 목업 스케치 그림에 포함되어 있으므로 네비게이션 바를 숨기는 게 더 좋을 것 같습니다. 캔바스의 왼쪽에 새로 생긴 네비게이션 컨트롤러를 선택한 뒤 애트리뷰트 인스펙터에서 'Shows Navigation Bar' 체크박스를 해제합니다.</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/13_HideNavigationBar.png" />
+		<p class="img_caption">네비게이션 바 숨기기</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>실행해 봅니다. 우리가 버튼을 올릴 영역을 탭하면 네비게이션 되면서 두 번째 뷰가 나타나는 것을 볼 수 있습니다.</p>
+		<div class="img_div img_width40 img_left">
+		<img src="./01_images/7_Run.png" />
+		<p class="img_caption">네비게이션이 정상적으로 동작합니다.</p>
+		</div>
+		<div class="img_div img_width40 img_right">
+		<img src="./01_images/14_FirstNavigation.png" />
+		</div>
+		<br style="clear:both;" />
+
+		<p>축하합니다. 첫 번째 움직이는 목업 프로젝트를 만들었습니다. </p>
+
+		<h2>3. Appear 세그웨이 선택하기 </h2>
+
+		<p>하지만, 우리의 목업 스케치상의 동작방식을 생각해 볼 때 push 방식의 뷰 전환은 적당하지 않아 보입니다.  "최근 업데이트" 영역이 확장되면서 "이슈 인기도"와 "내 관심 이슈"가 나타나야 하는데, 현재로선 원하는 애니메이션을 그대로 구현하기는 어려우니 차라리 push 효과 없이 장면이 변경되는 것이 더 낫겠죠.</p>
+
+		<p>push 세그웨이 연결을 삭제하고 다시 연결을 시도합니다. 컨트롤 키를 누른 상태에서 버튼에서 목표로 하는 뷰 컨트롤러로 드래그 앤 드롭한 뒤, 세그웨이 HUD가 나타나면 'appear'를 선택합니다.</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/15_AppearConnection.png" />
+		<p class="img_caption">push 세그웨이 삭제 후 appear 세그웨이 연결</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>appear 세그웨이를 선택하고 애트리뷰트 인스펙터를 보면 다음 그림과 같이 'Custom' 스타일의 'AppearSegue' 세그웨이 클래스인 것을 확인 할 수 있습니다. </p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/15_AppearConnection.png" />
+		<p class="img_caption">appear 세그웨이의 정보 확인</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>실행해 봅시다. 버튼 영역을 탭 하면 애니메이션 효과 없이 그림이 바뀌는 것을 확인할 수 있습니다. 원하는 애니메이션 효과를 정확히 구현할 수 없다면 이렇게 appear 장면전환을 하는 게 낫습니다. 중간 단계를 만들어 주면 보다 자세하게 내가 원하는 장면 전환을 전달할 수 있습니다.</p>
+
+
+		<h2>4. 모달 추가하기 </h2>
+
+		<p>모달은 큰 테스크 중에 작은 테스크를 완료하기 위해 사용자의 주의 집중을 원하는 방식입니다. 우리의 목업 스케치 상에서는 뉴스의 목록을 모달을 통해 선택할 수 있네요.</p>
+
+		<p>새로운 뷰 컨트롤러를 그림과 같이 캔바스의 위 쪽에 만들고 세 번째 씬을 넣습니다. 스토리보드 캔바스 상에 뷰 컨트롤러를 배치하는 위치는 실제 동작에는 아무런 영향을 주지 않지만 스토리보드가 복잡해 지는 것에 대비해서 흐름을 잘 볼 수 있도록 정리해야 합니다.</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/17_ModalViewAdded.png" />
+		<p class="img_caption">모달로 제공될 뷰 컨트롤러 추가</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>두 번째 씬의 목록 보기 버튼 영역에 버튼 오브젝트를 추가하고 컨트롤 키를 누른 상태로 세번째 씬으로 연결합니다. 세그웨이 선택 HUD가 나타나면 'modal'을 선택하세요.</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/18_ModalConnection.png" />
+		<p class="img_caption">모달 세그웨이 연결</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>Run 버튼을 눌러 실행해 보면, 모달이 올라오는 것을 확인할 수 있습니다. 하지만 모달을 내리는 버튼이 동작하지 않기 때문에 원래의 씬으로 돌아갈 수 없습니다. 아래 그림과 같이 모달로 올라오는 세번째 씬에 버튼을 추가한 뒤, 키보드 컨트롤 키를 누른 상태로 그 버튼에서 씬의 뷰 컨트롤러 오브젝트로 연결합니다. HUD에서 Event 중 'modalDismiss:'를 선택합니다.</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/19_ModalDismissConnection.png" />
+		<p class="img_caption">모달 디스미스 연결</p>
+		</div>
+		<br style="clear:both;" />
+
+
+		<p>Run 버튼을 눌러 실행해 보면, 모달이 올라오는 것을 확인할 수 있으며, 모달 뷰에서 모달 내리기 버튼을 탭 하면 모달이 정상적으로 내려갑니다. </p>
+
+
+		<h2>4. 모달에서 선택을 변경한 경우 </h2>
+
+		<p>모달은 큰 테스크의 흐름 중에 작은 테스크를 완료해야 하는 경우 주로 사용합니다. 그러므로 모달을 거치면 뷰가 변경됩니다. 연락처에 새로운 사람을 추가하거나, 캘린더에 일정을 추가하는 경우를 생각해 보면 모달이 올라갈 때의 뷰와 모달이 내려온 뒤의 뷰는 다릅니다. 우리의 목업 스케치 상에서도 마찬가지여서, 모달로 올라온 씬에서 뉴스의 카테고리를 선택하면 모달이 내려왔을 때, 해당 카테고리의 뉴스 목록이 나타나야 합니다.</p>
+
+
+		<p>아래 그림과 같이 모달 디스미스시에 나타날 씬을 구성합니다. 뷰 컨트롤러를 하나 추가하고 네 번째 그림을 추가합니다. 버튼을 하나 숨겨둡니다. 이 버튼은 탭을 통해 동작하는 게 아니라 숨겨진 코드를 통해 자동으로 동작합니다. appear 세그웨이로 연결하면 됩니다.</p>
+		<p>세그웨이의 아이덴티티를 'ModalDismissPush'라고 지정합니다. </p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/20_DismissPudhViewAdded.png" />
+		<p class="img_caption">모달 디스미스시 나타날 씬 만들고 'ModalDismissPush'세그웨이 연결</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>모달 씬에 버튼을 하나 추가한 뒤 뷰 컨트롤러의 'modalDismissPush:' 이벤트로 연결합니다. </p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/21_DismissPushConnection.png" />
+		<p class="img_caption">모달씬에서 버튼 생성하고 'modalDismissPush:'로 연결</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>Run 버튼을 눌러 실행합니다. 모달이 올라왔을 때 '사회' 영역의 버튼을 탭하면, 모달이 내려가면서 다음 씬인 사회 카테고리의 뉴스가 나오는 것을 확인할 수 있습니다.</p>
+
+
+		<h2>5. 흐름의 완성 </h2>
+
+		<p>아래 그림과 같이 전체 흐름을 완성해 봅시다. 네번째 씬과 다섯번째 씬은 appear 세그웨이로 연결되며,  다섯번째 씬과 여섯번째 씬은 push 세그웨이로 연결됩니다. </p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/22_FlowComplete.png" />
+		<p class="img_caption">다섯번째와 여섯번째 씬을 추가해서 전체 흐름을 완성</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>현재 네비게이션 바가 없어서 back 버튼을 제공받지 못합니다. 그로므로 우리가 back 버튼을 직접 만들어 보겠습니다. 여섯번째 씬에서 back 버튼 그림 위에 버튼을 올리고 뷰 컨트롤러의 'navigationBack:' 이벤트로 연결합니다.</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/23_BackConnection.png" />
+		<p class="img_caption">back 버튼을 'navigationBack:' 이벤트로 연결</p>
+		</div>
+		<br style="clear:both;" />
+
+		<p>이제 뒤로가기 기능까지 지원하는 프로토타입이 완성되었습니다. </p>
+
+		<p>전체 스토리보드 흐름은 아래와 같습니다.</p>
+		<div class="img_div img_width80 img_left">
+		<img src="./01_images/24_FinalFlow.png" />
+		<p class="img_caption">전체 스토리보드 흐름</p>
+		</div>
+		<br style="clear:both;" />
+
+
+		<p>지금까지 손으로 그린 목업 스케치를 이용해 프로토타입을 만드는 방법을 알아봤습니다. 다음 단계는 OS의 기본 인터페이스 요소들을 사용해서 보다 효율적이고 깔끔한 프로토타입을 만들어 보겠습니다. </p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">PrototypeSample maintained by <a href="http://codershigh.github.io/">CodersHigh</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+
+
+  </body>
+</html>
